@@ -13,6 +13,7 @@ import argparse
 timezone = "Australia/Sydney"
 display_to_screen = True
 cleanup = True
+rotation = 180 # number of degrees to rotate the image
 
 # Load all json files
 with open("timetable.json", mode="r", encoding="utf-8") as read_file:
@@ -99,6 +100,9 @@ def main(week):
             edit_svg(svg_name, f"period_{period}", line_assignments[str(line)][user_person])
         png_name = Path(svg_name).stem + ".png"
         convert_svg_to_png(f"tmp/{svg_name}", f"bitmaps/{png_name}")
+        image_to_rotate = Image.open(f"bitmaps/{png_name}")
+        rotated = image_to_rotate.rotate(rotation)
+        rotated.save(f"bitmaps/rotated_{rotation}_{png_name}")
 
         if display_to_screen:
             edp = epaper.epaper('epd2in13_V4').EPD()
@@ -107,15 +111,17 @@ def main(week):
                 edp.init()
 
                 # Fit the picture to the panel and convert to 1-bit monochrome
-                image = Image.open("bitmaps/full_without_period_0.png").convert("RGB")
-                image = image.convert("1")
+                image_to_display = Image.open(f"bitmaps/rotated_{rotation}_{png_name}").convert("RGB")
+                image_to_display = image_to_display.convert("1")
 
-                edp.display(edp.getbuffer(image))
+                edp.display(edp.getbuffer(image_to_display))
 
             finally:
                 edp.sleep()
 
-        if cleanup: Path.unlink(f"bitmaps/{png_name}") # remove png after use
+        if cleanup: # remove PNGs after use
+            Path.unlink(f"bitmaps/{png_name}")
+            Path.unlink(f"bitmaps/rotated_{rotation}_{png_name}")
 
     if "period_0" in day: # check if their is a period 0
         if day_of_week == 1: # check if it's tuesday
