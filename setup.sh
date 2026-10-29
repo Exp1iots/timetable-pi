@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir bitmaps tmp
+mkdir -p tmp/svg tmp/bitmaps
 
 python -m venv .venv
 
