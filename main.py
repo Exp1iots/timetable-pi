@@ -89,8 +89,6 @@ def main(week):
         if display_to_screen:
             edp = epaper.epaper('epd2in13_V4').EPD()
 
-            edp.Clear()
-
             try:
                 edp.init()
 
