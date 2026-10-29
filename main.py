@@ -127,7 +127,8 @@ def edit_svg_for_today(week):
         for period, line in day.items(): # assigns the key and value pair of "period: line_num" in timetable.json to python variables
             edit_svg(svg_name, f"period_{period}_line", f"Line {str(line)}") # must do line first as doing class first results in f"period_{period}_line" becoming f"period_{line_assignments[str(line)][user_person]}_line"
             edit_svg(svg_name, f"period_{period}", line_assignments[str(line)][user_person])
-        convert_svg_to_png(f"tmp/{svg_name}", f"bitmaps/{svg_name.removesuffix(".svg")}.png")
+        png_name = Path(svg_name).stem + ".png"
+        convert_svg_to_png(f"tmp/{svg_name}", f"bitmaps/{png_name}")
 
     if "period_0" in day: # check if their is a period 0
         if day_of_week == 1: # check if it's tuesday
