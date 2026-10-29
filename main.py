@@ -5,7 +5,7 @@ from html import escape
 import shutil
 from pathlib import Path
 from cairosvg import svg2png # must be installed
-# import epaper # waveshare-epaper must be installed
+import epaper # waveshare-epaper must be installed
 from PIL import Image
 
 # Variables
