@@ -5,6 +5,7 @@ from html import escape
 import shutil
 from pathlib import Path
 from cairosvg import svg2png # must be installed
+import epaper # must be installed - waveshare-epaper
 
 with open("timetable.json", mode="r", encoding="utf-8") as read_file:
     timetable = json.load(read_file)
@@ -143,3 +144,8 @@ if week_of_year in weeks["week_a"]:
     edit_svg_for_today("a")
 elif week_of_year in weeks["week_b"]:
     edit_svg_for_today("b")
+
+edp = epaper.epaper('epd2in13_V4').EPD()
+
+edp.init()
+edp.clear()
