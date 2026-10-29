@@ -14,6 +14,7 @@ timezone = "Australia/Sydney"
 display_to_screen = True
 cleanup = True
 rotation = 180 # number of degrees to rotate the image
+epaper_screen = "epd2in13_V4" # your epaper display name
 
 # Load all json files
 with open("timetable.json", mode="r", encoding="utf-8") as read_file:
@@ -105,7 +106,7 @@ def main(week):
         rotated.save(f"tmp/bitmaps/rotated_{rotation}_{png_name}")
 
         if display_to_screen:
-            edp = epaper.epaper('epd2in13_V4').EPD()
+            edp = epaper.epaper(epaper_screen).EPD()
 
             try:
                 edp.init()
