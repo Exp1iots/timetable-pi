@@ -6,6 +6,7 @@ import shutil
 from pathlib import Path
 from cairosvg import svg2png # must be installed
 import epaper # must be installed - waveshare-epaper
+from PIL import Image
 
 with open("timetable.json", mode="r", encoding="utf-8") as read_file:
     timetable = json.load(read_file)
@@ -148,5 +149,18 @@ elif week_of_year in weeks["week_b"]:
 
 edp = epaper.epaper('epd2in13_V4').EPD()
 
-edp.init()
-edp.clear()
+# edp.Clear()
+
+try:
+    edp.init()
+
+    # Fit the picture to the panel and convert to 1-bit monochrome
+    image = Image.open("bitmaps/full_without_period_0.png").convert("RGB")
+    image = image.convert("1")
+
+    edp.display(edp.getbuffer(image))
+
+finally:
+   edp.sleep()
+
+Path.unlink("bitmaps/full_without_period_0.png")
