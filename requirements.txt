@@ -1,2 +1,4 @@
 cairosvg
 waveshare-epaper
+gpiozero
+lgpio
