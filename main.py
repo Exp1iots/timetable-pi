@@ -7,6 +7,7 @@ from pathlib import Path
 from cairosvg import svg2png # must be installed
 import epaper # waveshare-epaper must be installed
 from PIL import Image
+import argparse
 
 # Variables
 timezone = "Australia/Sydney"
@@ -69,7 +70,20 @@ def convert_svg_to_png(svg_path, output_path):
 
     if cleanup: Path.unlink(svg_path) # remove svg after use
 
-user_person = input("Person (lower case): ")
+parser = argparse.ArgumentParser(
+    prog="TimeTable",
+    description="A python script that displays timetables on an e-ink screen"
+)
+
+parser.add_argument("-p", "--person")
+args = parser.parse_args()
+
+user_person = args.person
+
+if args.person:
+    pass
+else:
+    user_person = input("Person (lower case): ")
 
 today = datetime.now(ZoneInfo(timezone))
 day_of_week = today.weekday()
