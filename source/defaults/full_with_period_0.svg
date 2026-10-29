@@ -1,0 +1,43 @@
+<svg width="122" height="250" viewBox="0 0 122 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="122" height="250" fill="white"/>
+<rect x="2" y="42" width="118" height="3" fill="black"/>
+<rect x="2" y="205" width="118" height="3" fill="black"/>
+<rect x="2" y="123" width="118" height="3" fill="black"/>
+<mask id="stroke0_1_2" fill="white">
+<path d="M1 3H121V39H1V3Z"/>
+</mask>
+<path d="M1 39H-3V40H1V39ZM121 39V38H1V39V40H121V39ZM1 39H5V3H1H-3V39H1Z" fill="black" mask="url(#stroke0_1_2)"/>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="12" letter-spacing="0em"><tspan x="6" y="20.0615">period_0</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="9" letter-spacing="0em"><tspan x="9" y="32.7961">period_0_line</tspan></text>
+<mask id="stroke1_1_2" fill="white">
+<path d="M1 47H121V83H1V47Z"/>
+</mask>
+<path d="M1 83H-3V84H1V83ZM121 83V82H1V83V84H121V83ZM1 83H5V47H1H-3V83H1Z" fill="black" mask="url(#stroke1_1_2)"/>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="12" letter-spacing="0em"><tspan x="6" y="64.0615">period_1</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="9" letter-spacing="0em"><tspan x="9" y="76.7961">period_1_line</tspan></text>
+<mask id="stroke2_1_2" fill="white">
+<path d="M1 84H121V120H1V84Z"/>
+</mask>
+<path d="M1 120H-3V121H1V120ZM121 120V119H1V120V121H121V120ZM1 120H5V84H1H-3V120H1Z" fill="black" mask="url(#stroke2_1_2)"/>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="12" letter-spacing="0em"><tspan x="6" y="101.062">period_2</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="9" letter-spacing="0em"><tspan x="9" y="113.796">period_2_line</tspan></text>
+<mask id="stroke3_1_2" fill="white">
+<path d="M1 129H121V165H1V129Z"/>
+</mask>
+<path d="M1 165H-3V166H1V165ZM121 165V164H1V165V166H121V165ZM1 165H5V129H1H-3V165H1Z" fill="black" mask="url(#stroke3_1_2)"/>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="12" letter-spacing="0em"><tspan x="6" y="146.062">period_3</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="9" letter-spacing="0em"><tspan x="9" y="158.796">period_3_line</tspan></text>
+<mask id="stroke4_1_2" fill="white">
+<path d="M1 166H121V202H1V166Z"/>
+</mask>
+<path d="M1 202H-3V203H1V202ZM121 202V201H1V202V203H121V202ZM1 202H5V166H1H-3V202H1Z" fill="black" mask="url(#stroke4_1_2)"/>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="12" letter-spacing="0em"><tspan x="6" y="183.062">period_4</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="9" letter-spacing="0em"><tspan x="9" y="195.796">period_4_line</tspan></text>
+<mask id="stroke5_1_2" fill="white">
+<path d="M1 211H121V247H1V211Z"/>
+</mask>
+<path d="M1 247H-3V248H1V247ZM121 247V246H1V247V248H121V247ZM1 247H5V211H1H-3V247H1Z" fill="black" mask="url(#stroke5_1_2)"/>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="12" letter-spacing="0em"><tspan x="6" y="228.062">period_5</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="9" letter-spacing="0em"><tspan x="9" y="240.796">period_5_line</tspan></text>
+</svg>
+
