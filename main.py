@@ -36,7 +36,7 @@ def edit_svg(file_name, text_to_replace, text_to_replace_with):
     if Path(f"tmp/svg/{file_name}").exists(): # check if the tmp file already exists - not checking this results in the tmp file being overwritten by the default on every edit
         pass
     else:
-        shutil.copy(f"source/defaults/{file_name}", f"tmp/svg/{file_name}")
+        shutil.copy(f"source/svg_defaults/{file_name}", f"tmp/svg/{file_name}")
 
     #read input file
     fin = open(f"tmp/svg/{file_name}", "rt")
