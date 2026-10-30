@@ -16,6 +16,22 @@ cleanup = True
 rotation = 180 # number of degrees to rotate the image
 epaper_screen = "epd2in13_V4" # your epaper display name
 
+parser = argparse.ArgumentParser(
+    prog="TimeTable",
+    description="A python script that displays timetables on an e-ink screen"
+)
+
+parser.add_argument("-p", "--person")
+parser.add_argument("-S", "--no-screen", action="store_true")
+parser.add_argument("-C", "--no-cleanup", action="store_true")
+args = parser.parse_args()
+
+if args.no_screen:
+    display_to_screen = False
+
+if args.no_cleanup:
+    cleanup = False
+
 # Load all json files
 with open("timetable.json", mode="r", encoding="utf-8") as read_file:
     timetable = json.load(read_file)
@@ -71,14 +87,6 @@ def convert_svg_to_png(svg_path, output_path, keep_svg=False):
     svg2png(url=svg_path,write_to=output_path)
 
     if cleanup == True and keep_svg == False: Path.unlink(svg_path) # remove svg after use
-
-parser = argparse.ArgumentParser(
-    prog="TimeTable",
-    description="A python script that displays timetables on an e-ink screen"
-)
-
-parser.add_argument("-p", "--person")
-args = parser.parse_args()
 
 user_person = args.person
 
