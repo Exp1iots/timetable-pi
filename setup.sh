@@ -3,7 +3,7 @@
 mkdir -p tmp/svg tmp/bitmaps # Create the tmp dirs
 
 mkdir -p ~/.local/share/fonts
-cp source/fonts/Aldrich/Aldrich-Regular.ttf ~/.local/share/fonts/
+cp source/fonts/*/*.ttf ~/.local/share/fonts/
 
 python -m venv .venv # Build python virtual environment
 
