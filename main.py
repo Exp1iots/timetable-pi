@@ -94,31 +94,31 @@ days_of_week = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturda
 
 def main(week):
     if day_of_week == 5 or 6:
-                png_name = Path("weekend_error.svg").stem + ".png"
-                convert_svg_to_png("source/svg_defaults/weekend_error.svg", f"tmp/bitmaps/{png_name}", keep_svg=True)
-                image_to_rotate = Image.open(f"tmp/bitmaps/{png_name}")
-                rotated = image_to_rotate.rotate(rotation)
-                rotated.save(f"tmp/bitmaps/rotated_{rotation}_{png_name}")
+        png_name = Path("weekend_error.svg").stem + ".png"
+        convert_svg_to_png("source/svg_defaults/weekend_error.svg", f"tmp/bitmaps/{png_name}", keep_svg=True)
+        image_to_rotate = Image.open(f"tmp/bitmaps/{png_name}")
+        rotated = image_to_rotate.rotate(rotation)
+        rotated.save(f"tmp/bitmaps/rotated_{rotation}_{png_name}")
 
-                if display_to_screen:
-                    edp = epaper.epaper(epaper_screen).EPD()
+        if display_to_screen:
+            edp = epaper.epaper(epaper_screen).EPD()
 
-                    try:
-                        edp.init()
+            try:
+                edp.init()
 
-                        # Fit the picture to the panel and convert to 1-bit monochrome
-                        image_to_display = Image.open(f"tmp/bitmaps/rotated_{rotation}_{png_name}").convert("RGB")
-                        image_to_display = image_to_display.convert("1")
+                # Fit the picture to the panel and convert to 1-bit monochrome
+                image_to_display = Image.open(f"tmp/bitmaps/rotated_{rotation}_{png_name}").convert("RGB")
+                image_to_display = image_to_display.convert("1")
 
-                        edp.display(edp.getbuffer(image_to_display))
+                edp.display(edp.getbuffer(image_to_display))
 
-                    finally:
-                        edp.sleep()
+            finally:
+                edp.sleep()
 
-                if cleanup: # remove PNGs after use
-                    Path.unlink(f"tmp/bitmaps/{png_name}")
-                    Path.unlink(f"tmp/bitmaps/rotated_{rotation}_{png_name}")
-                exit()
+        if cleanup: # remove PNGs after use
+            Path.unlink(f"tmp/bitmaps/{png_name}")
+            Path.unlink(f"tmp/bitmaps/rotated_{rotation}_{png_name}")
+        exit()
 
     day = timetable[f"week_{week}"][days_of_week[day_of_week]]
 
