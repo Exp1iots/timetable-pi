@@ -6,24 +6,24 @@
 <path d="M1 43H121V79H1V43Z"/>
 </mask>
 <path d="M1 79H-3V80H1V79ZM121 79V78H1V79V80H121V79ZM1 79H5V43H1H-3V79H1Z" fill="black" mask="url(#stroke0_20_31)"/>
-<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich Bitmap" font-size="12" letter-spacing="0em"><tspan x="6" y="60.0615">period_1</tspan></text>
-<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich Bitmap" font-size="9" letter-spacing="0em"><tspan x="9" y="72.7961">period_1_line</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="12" letter-spacing="0em"><tspan x="6" y="60.0615">period_1</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="9" letter-spacing="0em"><tspan x="9" y="72.7961">period_1_line</tspan></text>
 <mask id="stroke1_20_31" fill="white">
 <path d="M1 80H121V116H1V80Z"/>
 </mask>
 <path d="M1 116H-3V117H1V116ZM121 116V115H1V116V117H121V116ZM1 116H5V80H1H-3V116H1Z" fill="black" mask="url(#stroke1_20_31)"/>
-<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich Bitmap" font-size="12" letter-spacing="0em"><tspan x="6" y="97.0615">period_2</tspan></text>
-<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich Bitmap" font-size="9" letter-spacing="0em"><tspan x="9" y="109.796">period_2_line</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="12" letter-spacing="0em"><tspan x="6" y="97.0615">period_2</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="9" letter-spacing="0em"><tspan x="9" y="109.796">period_2_line</tspan></text>
 <mask id="stroke2_20_31" fill="white">
 <path d="M1 125H121V161H1V125Z"/>
 </mask>
 <path d="M1 161H-3V162H1V161ZM121 161V160H1V161V162H121V161ZM1 161H5V125H1H-3V161H1Z" fill="black" mask="url(#stroke2_20_31)"/>
-<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich Bitmap" font-size="12" letter-spacing="0em"><tspan x="6" y="142.062">period_3</tspan></text>
-<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich Bitmap" font-size="9" letter-spacing="0em"><tspan x="9" y="154.796">period_3_line</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="12" letter-spacing="0em"><tspan x="6" y="142.062">period_3</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="9" letter-spacing="0em"><tspan x="9" y="154.796">period_3_line</tspan></text>
 <mask id="stroke3_20_31" fill="white">
 <path d="M1 170H121V206H1V170Z"/>
 </mask>
 <path d="M1 206H-3V207H1V206ZM121 206V205H1V206V207H121V206ZM1 206H5V170H1H-3V206H1Z" fill="black" mask="url(#stroke3_20_31)"/>
-<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich Bitmap" font-size="12" letter-spacing="0em"><tspan x="6" y="187.062">period_4</tspan></text>
-<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich Bitmap" font-size="9" letter-spacing="0em"><tspan x="9" y="199.796">period_4_line</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="12" letter-spacing="0em"><tspan x="6" y="187.062">period_4</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Aldrich" font-size="9" letter-spacing="0em"><tspan x="9" y="199.796">period_4_line</tspan></text>
 </svg>
