@@ -62,7 +62,7 @@ def edit_svg(file_name, text_to_replace, text_to_replace_with):
     #close the file
     fin.close()
 
-def convert_svg_to_png(svg_path, output_path):
+def convert_svg_to_png(svg_path, output_path, keep_svg=False):
     # Source - https://stackoverflow.com/a/13320450
     # Posted by JWL, modified by community. See post 'Timeline' for change history
     # Retrieved 2026-10-29, License - CC BY-SA 3.0
@@ -70,7 +70,7 @@ def convert_svg_to_png(svg_path, output_path):
 
     svg2png(url=svg_path,write_to=output_path)
 
-    if cleanup: Path.unlink(svg_path) # remove svg after use
+    if cleanup == True and keep_svg == False: Path.unlink(svg_path) # remove svg after use
 
 parser = argparse.ArgumentParser(
     prog="TimeTable",
@@ -90,9 +90,36 @@ else:
 today = datetime.now(ZoneInfo(timezone))
 day_of_week = today.weekday()
 week_of_year = today.isocalendar().week
-days_of_week = ["monday", "tuesday", "wednesday", "thursday", "friday"]
+days_of_week = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 
 def main(week):
+    if day_of_week == 5 or 6:
+                png_name = Path("weekend_error.svg").stem + ".png"
+                convert_svg_to_png("source/svg_defaults/weekend_error.svg", f"tmp/bitmaps/{png_name}", keep_svg=True)
+                image_to_rotate = Image.open(f"tmp/bitmaps/{png_name}")
+                rotated = image_to_rotate.rotate(rotation)
+                rotated.save(f"tmp/bitmaps/rotated_{rotation}_{png_name}")
+
+                if display_to_screen:
+                    edp = epaper.epaper(epaper_screen).EPD()
+
+                    try:
+                        edp.init()
+
+                        # Fit the picture to the panel and convert to 1-bit monochrome
+                        image_to_display = Image.open(f"tmp/bitmaps/rotated_{rotation}_{png_name}").convert("RGB")
+                        image_to_display = image_to_display.convert("1")
+
+                        edp.display(edp.getbuffer(image_to_display))
+
+                    finally:
+                        edp.sleep()
+
+                if cleanup: # remove PNGs after use
+                    Path.unlink(f"tmp/bitmaps/{png_name}")
+                    Path.unlink(f"tmp/bitmaps/rotated_{rotation}_{png_name}")
+                exit()
+
     day = timetable[f"week_{week}"][days_of_week[day_of_week]]
 
     def run_edit_svg(svg_name):
