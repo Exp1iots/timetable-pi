@@ -101,7 +101,7 @@ week_of_year = today.isocalendar().week
 days_of_week = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 
 def main(week):
-    if day_of_week == 5 or 6:
+    if day_of_week == 5 or day_of_week == 6:
         png_name = Path("weekend_error.svg").stem + ".png"
         convert_svg_to_png("source/svg_defaults/weekend_error.svg", f"tmp/bitmaps/{png_name}", keep_svg=True)
         image_to_rotate = Image.open(f"tmp/bitmaps/{png_name}")
